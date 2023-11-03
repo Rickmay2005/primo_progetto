@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Index root {%endblock title%}
+
+{%block content%}
+<table>
+    <tr>
+        <td>Studente={{studente}}</td>
+        <td>Voti={{voti}}</td>
+    </tr>
+</table>
+{% endblock content%}
