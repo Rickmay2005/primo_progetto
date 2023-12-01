@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ Query }}
+{% endblock title %}
+
+{% block content %}
+    {% for x in articoli_cognome %}
+        <p><strong>Titolo:</strong><strong>{{ x.titolo }}</strong></p>
+        <p><strong>Contenuto:</strong><strong>{{ x.contenuto }}</strong></p>
+        <p><strong>Autore:</strong><strong>{{ x.giornalista }}</strong></p>
+        <br>
+        {% endfor %}
+    <p>numero totale articoli: {{numero_totale_articoli }}</p>
+    <p>numero articoli giornalista: {{numero_articoli_giornalista_1 }}</p>
+    
+    {% for x in articoli_ordinati %}
+        <p><strong>Titolo:</strong><strong>{{ x.titolo }}</strong></p>
+        <p><strong>Contenuto:</strong><strong>{{ x.contenuto }}</strong></p>
+        <p><strong>Autore:</strong><strong>{{ x.giornalista }}</strong></p>
+        <br>
+        {% endfor %}
+    
+    {% for x in articoli_senza_visualizzazioni %}
+        <p><strong>Titolo:</strong><strong>{{ x.titolo }}</strong></p>
+        <p><strong>Contenuto:</strong><strong>{{ x.contenuto }}</strong></p>
+        <p><strong>Autore:</strong><strong>{{ x.giornalista }}</strong></p>
+        <br>
+        {% endfor %}
+    
+    {% for x in giornalista_1 %}
+        <p><strong>Titolo:</strong><strong>{{ x.titolo }}</strong></p>
+        <p><strong>Contenuto:</strong><strong>{{ x.contenuto }}</strong></p>
+        <p><strong>Autore:</strong><strong>{{ x.giornalista }}</strong></p>
+        <br>
+        {% endfor %}
+
+    {% for x in articolo_piu_visualizzato %}
+        <p><strong>Titolo:</strong><strong>{{ x.titolo }}</strong></p>
+        <p><strong>Contenuto:</strong><strong>{{ x.contenuto }}</strong></p>
+        <p><strong>Autore:</strong><strong>{{ x.giornalista }}</strong></p>
+        <br>
+        {% endfor %}
+
+    {% for x in giornalisti_data %}
+        <p><strong>Titolo:</strong><strong>{{ x.titolo }}</strong></p>
+        <p><strong>Contenuto:</strong><strong>{{ x.contenuto }}</strong></p>
+        <p><strong>Autore:</strong><strong>{{ x.giornalista }}</strong></p>
+        <br>
+        {% endfor %}
+
+    {% for x in articoli_del_giorno %}
+        <p><strong>Titolo:</strong><strong>{{ x.titolo }}</strong></p>
+        <p><strong>Contenuto:</strong><strong>{{ x.contenuto }}</strong></p>
+        <p><strong>Autore:</strong><strong>{{ x.giornalista }}</strong></p>
+        <br>
+        {% endfor %}
+
+    {% for x in articoli_periodo %}
+        <p><strong>Titolo:</strong><strong>{{ x.titolo }}</strong></p>
+        <p><strong>Contenuto:</strong><strong>{{ x.contenuto }}</strong></p>
+        <p><strong>Autore:</strong><strong>{{ x.giornalista }}</strong></p>
+        <br>
+        {% endfor %}
+        
+    <p>{{ giornalisti_nati }}</p>
+    <p>{{  articoli_giornalisti }}</p>
+    <p>{{  giornalista_giovane }}</p>
+    <p>{{ giornalista_anziano }}</p>
+    <p>{{ ultimi }}</p>
+    <p>{{ articoli_minime_visualizzazioni}}</p>
+    <p>{{ articoli_parola }}</p>
+    <p>{{ articoli_mese_anno }}</p>
+    <p>{{ giornalisti_con_articoli_popolari }}</p>
+    <p>{{ articoli_con_and }}</p>
+    <p>{{ articoli_con_or }}</p>
+    <p>{{ articoli_con_not }}</p>
+
+{% endblock content %}
