@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Materie {%endblock title%}
+
+{%block content%}
+    <p> Media dei voti scolastici: </p>
+    <list>
+        {% for chiave,value in media.items %}
+            <li> {{ chiave }}: {{value }}</li>
+        {% endfor %}
+    </list>
+{% endblock content%}

@@ -3,6 +3,7 @@
 {%block title%} {{block.super}} | Index root {%endblock title%}
 
 {%block content%}
+<<<<<<< HEAD
 
     {% for y in var1 %}
         {{ y }}
@@ -18,4 +19,15 @@
         <p style=color:black>{{media}}</p>
     {% endif %}
 
+=======
+    vet={{  vet  }}<br/>
+    media={{  media  }}<br/>
+    (% if media < 6 %)
+        <p style=color:red>{{ num1 }}</p>
+    (% elif media > 6 %)
+        <p style=color:green>num2</p>
+    (% else %)
+        <p style=color:black>tot</p>
+    (% endif %)
+>>>>>>> voti
 {% endblock content%}
