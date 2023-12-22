@@ -7,11 +7,11 @@
     num1={{  var1  }}<br/>
     num2={{  var2  }}<br/>
     tot={{  somma  }}<br/>
-    (% if num1 < num2 %)
+    {% if num1 < num2 %}
         <p style=color:red>num1</p>
-    (% elif num1 > num2)
+    {% elif num1 > num2 }
         <p style=color:green>num2</p>
-    (% else %)
+    {% else %}
         <p style=color:black>tot</p>
-    (% endif %)
+    {% endif %}
 {% endblock content%}
