@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Voti delle materie {%endblock title%}
+
+{%block content%}
+    <list>
+        <li>Voto massimo: {{max}}</li>
+        <li>
+        {% for materia in matMax %}
+            {{materia}},
+        {% endfor %}
+        </li>
+        <li>
+            {% for studente in studMax %}
+                {{studente}},
+            {% endfor %}
+            </li>
+        <li>Voto minimo: {{min}}</li>
+        <li>
+            {% for materia in matMin %}
+                {{materia}},
+            {% endfor %}
+            </li>
+            <li>
+                {% for studente in studMin %}
+                    {{studente}},
+                {% endfor %}
+                </li>
+    </list>
+{% endblock content%}

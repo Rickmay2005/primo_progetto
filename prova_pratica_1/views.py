@@ -20,8 +20,7 @@ def media(request):
     somma=0
     for i in range(30):
         vet.append(random.randrange(1,10,1))
-        for i in range(len(vet)):
-            somma+=vet[i]
+        somma+=vet[i]
     media=somma/len(vet)
     context = {
         'vet' : vet,
@@ -30,10 +29,8 @@ def media(request):
     return render(request,"media.html",context)
 
 def voti(request):
-    voti=[]
-    studente=[]
+    voti={'Giacomo':8, 'Marco':7, 'Matteo':5,}
     context={
-        'studente' : studente,
         'voti' : voti,     
     }
     return render(request,"voti.html",context)
